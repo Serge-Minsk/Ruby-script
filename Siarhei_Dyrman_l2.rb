@@ -33,7 +33,16 @@ puts stroka_new.downcase.count('a')
 stroka_polindrom = 'texttxet'
 puts stroka_polindrom == stroka_polindrom.reverse
 #7.Вывести на экран числа от 10 до 3 не влючая 5, причём числа, кратные 3м, вывести в квадрате
-#p p(3..10).to_a.each{ |e| e**2 div(3) && e != 5 }
+arr7 = (3..10).to_a.reverse
+arr7.delete(5)
+arr7.each do |j|
+  if j % 3 == 0
+    print "#{j**2} "
+  else
+    print "#{j} "
+  end
+end
+puts
 #8.Ответить на вопрос: если ли в магазине какой-либо продукт с ценой в 15?
 shop = {
     milk: 10,
@@ -45,7 +54,8 @@ shop = {
 puts shop.value?(15)
 #9.Прибавить 100 к его максимальному элементу:
 ar = [1, 6,1,8,2,-1,3,5]
-ar[ar.index(ar.max)] = ar.max + 100
+#ar[ar.index(ar.max)] = ar.max + 100
+ar.map{ |e| if e == ar.max; then e = ar.max + 100; end }
 p ar
 #10.Вывести отсортированный по убыванию массив из уникальных элементов начального массива:
 ar = [7, 3, [4, 5, 1], 1, 9, [2, 8, 1]]
