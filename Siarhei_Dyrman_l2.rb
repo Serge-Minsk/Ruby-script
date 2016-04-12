@@ -55,7 +55,8 @@ puts shop.value?(15)
 #9.Прибавить 100 к его максимальному элементу:
 ar = [1, 6,1,8,2,-1,3,5]
 #ar[ar.index(ar.max)] = ar.max + 100
-ar.map{ |e| if e == ar.max; then e = ar.max + 100; end }
+max_ar = ar.max
+ar.map!{ |e| if e == max_ar; then e = max_ar + 100; else e; end }
 p ar
 #10.Вывести отсортированный по убыванию массив из уникальных элементов начального массива:
 ar = [7, 3, [4, 5, 1], 1, 9, [2, 8, 1]]
