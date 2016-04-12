@@ -30,4 +30,4 @@ kurs_prod = 20150 + 0.3 * 20150
 puts sum * kurs_prod
 
 puts (5600000 / kurs_prod).to_i
-puts ((5600000 / kurs_prod)-(5600000 / kurs_prod).to_i)*kurs_prod > 10.000
+puts ((5600000 / kurs_prod)-(5600000 / kurs_prod).to_i)*kurs_prod >= 10000
